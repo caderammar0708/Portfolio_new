@@ -11,6 +11,22 @@
   --card-border: rgba(255, 255, 255, 0.05);
   --glass-bg: rgba(10, 10, 15, 0.7);
   --glass-border: rgba(255, 255, 255, 0.08);
+  --badge-bg: rgba(99, 102, 241, 0.1);
+  --badge-text: #c7d2fe;
+  --badge-border: rgba(99, 102, 241, 0.2);
+}
+
+body.light-mode {
+  --bg-color: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(0, 0, 0, 0.05);
+  --glass-bg: rgba(248, 250, 252, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --badge-bg: rgba(99, 102, 241, 0.15);
+  --badge-text: #4338ca;
+  --badge-border: rgba(99, 102, 241, 0.3);
 }
 
 * {
@@ -28,7 +44,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Outfit', sans-serif;
   color: var(--text-primary);
 }
@@ -46,7 +67,7 @@ a {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background-image: 
+  background-image:
     radial-gradient(at 40% 20%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
     radial-gradient(at 80% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
     radial-gradient(at 0% 50%, rgba(99, 102, 241, 0.1) 0px, transparent 50%);
@@ -164,7 +185,7 @@ section {
 .glass-card:hover {
   transform: translateY(-5px);
   border-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 40px -20px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
 }
 
 /* Badges */
@@ -173,10 +194,10 @@ section {
   padding: 0.35rem 0.8rem;
   border-radius: 9999px;
   font-size: 0.875rem;
-  font-weight: 500;
-  background: rgba(99, 102, 241, 0.1);
-  color: #c7d2fe;
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  font-weight: 600;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  border: 1px solid var(--badge-border);
 }
 
 /* Animations */
@@ -185,6 +206,7 @@ section {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -196,9 +218,17 @@ section {
   animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
 
 /* Timeline */
 .timeline {
@@ -343,11 +373,13 @@ footer {
   height: 40px;
   border-radius: 50%;
   background: var(--card-bg);
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid var(--card-border);
   transition: all 0.3s ease;
+  outline: none;
 }
 
 .social-icon:hover {
