@@ -25,7 +25,7 @@ const Hero = () => {
             Available for New Opportunities
           </div>
           <h1 className="title">
-            Hi, I'm <span className="text-gradient">Ammar Cader</span>
+            Hi, I'm <span className="text-gradient">Cader Ammar</span>
           </h1>
           <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: 'var(--text-secondary)', fontWeight: 500 }}>
             Software & AI Automation Developer
@@ -33,7 +33,7 @@ const Hero = () => {
           <p className="subtitle" style={{ marginBottom: '2.5rem' }}>
             I build scalable web applications, intelligent automation systems, and AI voice agents that streamline business operations and enhance customer interactions.
           </p>
-          
+
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
             <a href="#projects" className="btn btn-primary">
               View My Work <ArrowRight size={18} />
